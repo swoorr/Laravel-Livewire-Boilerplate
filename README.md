@@ -4,6 +4,8 @@
 <h2>Laravel/Livewire 💻 </h2>
 - Components...<br>
 - Alpinejs<br>
-- Modern web framework with Livewire<br>
+- Modern web framework with Livewire<br><br>
 
-<p align="center"><a href="https://github.com/swoorr/Laravel-Livewire-init" target="_blank"><img src="/resources/img/code.png" width="600"></a>
+<p align="center"><a href="https://github.com/swoorr/Laravel-Livewire-init" target="_blank"><img src="/resources/img/code.png" width="100%"></a><br><br>
+
+<p align="center"><a href="https://github.com/swoorr/Laravel-Livewire-init" target="_blank"><img src="/resources/img/screen-form.png" width="100%"></a><br><br>
