@@ -6,10 +6,10 @@
 - Alpinejs<br>
 - Modern web framework with Livewire<br><br>
 
-<h2>Install and run</h2><br>
+<h2>Install and run</h2>
 - with/MYSQL<br>
 - with/SEEDER<br>
-- SEEDER: ```php artisan db:seed --class=PostsTableSeeder```<br><br>
+- SEEDER: `php artisan db:seed --class=PostsTableSeeder`<br><br>
 
 <p align="center"><a href="https://github.com/swoorr/Laravel-Livewire-init" target="_blank"><img src="/resources/img/code.png" width="100%"></a><br><br>
 
