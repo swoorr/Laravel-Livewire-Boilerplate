@@ -9,7 +9,7 @@
 <h2>Install and run</h2>
 - with/MYSQL<br>
 - with/SEEDER<br>
-- SEEDER: `php artisan db:seed --class=PostsTableSeeder`<br><br>
+- SEEDER:<br><pre>php artisan db:seed --class=PostsTableSeeder</pre><br><br>
 
 <p align="center"><a href="https://github.com/swoorr/Laravel-Livewire-init" target="_blank"><img src="/resources/img/code.png" width="100%"></a><br><br>
 
