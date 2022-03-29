@@ -9,7 +9,8 @@ class Header extends Component
     public $siteLogo = "FurkanSahin 😆";
     public $headerMenu = [
         [ "key" => "user", "val" => "User Home" ],
-        [ "key" => "user/list", "val" => "User List" ]
+        [ "key" => "user/list", "val" => "User List" ],
+        [ "key" => "cars", "val" => "Cars" ]
     ];
 
     public function __construct()

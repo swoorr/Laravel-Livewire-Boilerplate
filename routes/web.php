@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\AddUser;
+use App\Http\Livewire\ShowCars;
 use App\Http\Livewire\ShowUsers;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,4 @@ Route::get('/', function () {
 
 Route::get('/user', AddUser::class);
 Route::get('/user/list', ShowUsers::class);
+Route::get('/cars', ShowCars::class);
