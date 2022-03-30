@@ -14,81 +14,18 @@ class CarSeeder extends Seeder
      */
     public function run()
     {
-        //
-        // DB::table('users')->insert([
-        //     'name' => Str::random(10),
-        //     'email' => Str::random(10).'@gmail.com',
-        //     'password' => Hash::make('password'),
-        // ]);
 
         $faker = \Faker\Factory::create("tr_TR");
 
         $randomBrandCarList = [
-            'Audi',
-            'BMW',
-            'Chevrolet',
-            'Citroen',
-            'Dacia',
-            'Fiat',
-            'Ford',
-            'Honda',
-            'Hyundai',
-            'Kia',
-            'Mazda',
-            'Mercedes-Benz',
-            'Mini',
-            'Nissan',
-            'Opel',
-            'Peugeot',
-            'Renault',
-            'Seat',
-            'Skoda',
-            'Subaru',
-            'Suzuki',
-            'Toyota',
-            'Volkswagen',
-            'Volvo',
+            'Audi','BMW','Chevrolet','Citroen','Dacia','Fiat','Ford','Honda','Hyundai','Kia','Mazda','Mercedes-Benz','Mini','Nissan','Opel','Peugeot','Renault','Seat','Skoda','Subaru','Suzuki','Toyota','Volkswagen','Volvo',
         ];
 
         $randomModelCarList = [
-            'A1',
-            'A3',
-            'A4',
-            'A5',
-            'A6',
-            'A7',
-            'A8',
-            'Q3',
-            'Q5',
-            'Q7',
-            'Q8',
-            'R8',
-            'RS3',
-            'RS4',
-            'RS5',
-            'RS6',
-            'S1',
-            'S2',
-            'S3',
-            'S4',
-            'S5',
-            'S6',
-            'S7',
-            'S8',
-            'TT',
-            'TTS',
-            'V8',
-            'X1',
-            'X3',
-            'X4',
-            'X5',
-            'X6',
-            'XC60',
-            'XC70',
-            'XC90',
+            'A1','A3','A4','A5','A6','A7','A8','Q3','Q5','Q7','Q8','R8','RS3','RS4','RS5','RS6','S1','S2','S3','S4','S5','S6','S7','S8','TT','TTS','V8','X1','X3','X4','X5','X6','XC60','XC70','XC90',
         ];
 
-        $randomAnimalNames = ['cat', 'dog', 'bird', 'fish', 'lion', 'tiger', 'bear', 'panda', 'pig', 'cow', 'horse', 'sheep', 'goat', 'chicken', 'duck', 'goose', 'pigeon', 'parrot', 'rabbit', 'camel', 'deer', 'elephant', 'giraffe', 'hippo', 'monkey', 'penguin', 'rhino', 'snake', 'turtle', 'zebra', 'ant', 'bee', 'butterfly', 'caterpillar', 'dragonfly', 'fish', 'fly', 'ladybug', 'moth', 'spider', 'worm', 'ant', 'bee', 'butterfly', 'caterpillar', 'dragonfly', 'fish', 'fly', 'ladybug', 'moth', 'spider', 'worm', 'ant', 'bee', 'butterfly', 'caterpillar', 'dragonfly', 'fish', 'fly', 'ladybug', 'moth', 'spider', 'worm', 'ant', 'bee', 'butterfly', 'caterpillar', 'dragonfly', 'fish', 'fly', 'ladybug', 'moth', 'spider', 'worm', 'ant', 'bee', 'butterfly', 'caterpillar', 'dragonfly', 'fish', 'fly', 'ladybug', 'moth', 'spider', 'worm', 'ant', 'bee', 'butterfly', 'caterpillar', 'dragonfly', 'fish', 'fly', 'ladybug', 'moth', 'spider', 'worm', 'ant', 'bee', 'butterfly', 'caterpillar', 'dragonfly', 'fish', 'fly', 'ladybug', 'moth', 'spider', 'worm', 'ant', 'bee', 'butterfly', 'caterpillar', 'dragonfly', 'fish', 'fly', 'ladybug', 'moth', 'spider', 'worm', 'ant', 'bee', 'butterfly', 'caterpillar', 'dragonfly', 'fish', 'fly', 'ladybug', 'moth', 'spider', 'worm', 'ant', 'bee', 'butter'];
+        $randomAnimalNames = ['cat', 'dog', 'bird', 'fish', 'lion', 'tiger', 'bear', 'panda', 'pig', 'cow', 'horse', 'sheep', 'goat', 'chicken', 'duck', 'goose', 'pigeon', 'parrot', 'rabbit', 'camel', 'deer', 'elephant', 'giraffe', 'hippo', 'monkey', 'penguin', 'rhino', 'snake', 'turtle', 'zebra', 'ant', 'bee', 'butterfly', 'caterpillar'];
 
         $randomCarImagesListWithURL = [
             'https://www.carlogos.org/car-logos/audi-logo.png',
@@ -111,18 +48,17 @@ class CarSeeder extends Seeder
 
 
         $findImageByBrandName = function ($brandName) use ($randomCarImagesListWithURL) {
-            foreach ($randomCarImagesListWithURL as $key => $value) {
+            foreach ($randomCarImagesListWithURL as $value) {
                 $brandName = strtolower($brandName);
                 if (strpos($value, $brandName) !== false) {
                     return $value;
                 }
             }
-            
+
             return 'https://www.carlogos.org/car-logos/ferrari-logo.png';
         };
 
         for ($i = 0; $i < 200; $i++) {
-
 
             $brand = $randomBrandCarList[array_rand($randomBrandCarList)];
 
@@ -134,13 +70,13 @@ class CarSeeder extends Seeder
                 'model' => $randomModelCarList[array_rand($randomModelCarList)],
                 'color' => $faker->colorName,
                 'year' => $faker->year,
-                // random TRY Price
                 'price' => $faker->numberBetween(10000, 100000),
                 'image' => $img,
                 'is4x4' => $faker->boolean,
                 'isAutomatic' => $faker->boolean,
                 'isAirCondition' => $faker->boolean,
             ]);
+            
         }
     }
 }
